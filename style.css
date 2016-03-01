@@ -1,0 +1,173 @@
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  background: none repeat scroll 0 0 #FFCB35;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 27px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 0 #333;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+body {
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+font-weight: 300;
+background: #ffb347; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #ffb347 , #ffcc33); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #ffb347 , #ffcc33); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}        
+
+#randomNums {
+  max-width: 700px;
+  min-height: 70px;
+}
+
+td {
+  border: 1px solid #FFCB35;
+  background-color: #FFC736;
+  color:#FFFFFF;
+  width: 60px;
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+table * {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+ }
+
+
+#newGame, .roll, #submit {
+  border: 0;
+  background: #FFCB35;
+  color: white;
+  padding: 8px 14px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 5px 5px 5px;
+  /* needed for anchors */
+  position: relative;
+  box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae, 3px 2px #3a587f, 2px 3px #4171ae, 4px 3px #3a587f, 3px 4px #4171ae, 5px 4px #3a587f, 4px 5px #4171ae, 6px 5px #3a587f, 5px 6px #4171ae;
+}
+button:hover, button:focus, button.hover, button.focus, .button:hover, .button:focus, .button.hover, .button.focus, input[type=submit]:hover, input[type=submit]:focus, input[type=submit].hover, input[type=submit].focus {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae, 3px 2px #3a587f, 2px 3px #4171ae, 4px 3px #3a587f, 3px 4px #4171ae;
+}
+button:active, button.active, .button:active, .button.active, input[type=submit]:active, input[type=submit].active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae;
+}
+
+
+.selected, .otherClass {
+  background-color: #FFFFFF;
+  color: #FFC736;
+}
+
+@keyframes rotateStar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.star {
+  position: relative;
+  margin: 5px 5px 5px 5px;
+  top: 18.75px;
+  border: 25px solid transparent;
+  border-top: 18.5px solid #FFC736;
+  border-bottom: none;
+  display: inline-block;
+  height: 40px;
+  margin: 3px;
+  width: 40px;
+}
+.star:hover {
+  border-top-color: transparent;
+  animation: rotateStar 2s linear;
+}
+.star,
+.star * {
+  width: 0;
+  height: 0;
+}
+.star:before,
+.star:after {
+  position: absolute;
+  display: block;
+  content: '';
+  top: -31.25px;
+  border: 25px solid transparent;
+}
+.star:before {
+  left: -8.75px;
+  border-left: 18.5px solid #FFC736;
+  transform: rotate(18.2deg);
+}
+.star:after {
+  left: -34.25px;
+  border-right: 18.5px solid #FFC736;
+  transform: rotate(-18.2deg);
+}
+
+
+.correct {
+  background-color: #00e240;
+  color: #1831bc;
+  width: 230px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+.incorrect {
+  background-color: #f93131;
+  color: white;
+  width: 230px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+.disabled {
+  background-color: #6185e8;
+  color: #cacaca;
+}
+
+.winner {
+  background-color: blue;
+  color: #FFCB35;
+  width: 230px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+.wrapper {
+  border: 1px solid #ccc;
+  margin: 5% auto;
+  padding: 10px;
+  position: relative;
+  width: 500px;
+/*  height: 500px;*/
+  background: #FFFFFF;
+}
